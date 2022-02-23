@@ -78,6 +78,7 @@ module.exports = function (api) {
         },
       ],
       ["@babel/plugin-proposal-private-property-in-object", { loose: true }],
+      ["@babel/plugin-proposal-private-methods", { loose: true }],
       isProductionEnv && [
         "babel-plugin-transform-react-remove-prop-types",
         {
