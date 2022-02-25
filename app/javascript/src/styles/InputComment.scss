@@ -1,0 +1,27 @@
+.inputComment {
+  display: flex;
+  align-items: flex-start;
+  margin: 30px 20px;
+  padding: 20px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.button-send {
+  padding: 7px 15px;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--moderate-blue);
+  margin-left: 30px;
+}
+
+.textarea-comment {
+  resize: none;
+  width: 90%;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  outline: none;
+}
