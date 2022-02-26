@@ -1,0 +1,46 @@
+.tab-comment {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.user-comment img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dark-blue);
+  margin-top: -10px;
+}
+
+.comment-created {
+  color: var(--light-grayish-blue);
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: -8px;
+}
+
+.comment-content {
+  font-size: 12px;
+}
+
+.button-reply {
+  background-color: transparent;
+  color: var(--moderate-blue);
+  font-weight: 900;
+  transition: all 2s;
+
+  img {
+    margin-right: 5px;
+    margin-top: 3px;
+    width: 12px;
+  }
+
+  &:hover {
+    opacity: 0.4;
+  }
+}

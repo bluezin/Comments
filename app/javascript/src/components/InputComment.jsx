@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import UserAvatar from "/app/assets/images/image-amyrobson.png";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "../styles/InputComment.scss";
 
-const InputComment = () => {
+const InputComment = ({ setComments }) => {
   const [newComment, setNewComment] = useState("");
+  const [user, setUser] = useState({});
 
   const handleComment = (event) => {
     setNewComment(event.target.value);
@@ -12,14 +13,24 @@ const InputComment = () => {
   const handleSend = () => {
     if (newComment.trim() === "") return;
 
-    console.log(newComment);
+    axios
+      .post("http://localhost:3000/api/comments/create", {
+        content: newComment,
+      })
+      .then((data) => setComments(data.data));
   };
+
+  useEffect(() => {
+    axios.get("/api/user").then((data) => {
+      setUser(data.data);
+    });
+  }, []);
 
   return (
     <div className="inputComment shadow">
-      <figure className="user-avatar">
-        <img src={UserAvatar} alt="user" />
-      </figure>
+      <figcaption className="user-avatar">
+        <img src={user.image_url} alt={user.name} />
+      </figcaption>
       <textarea
         placeholder="Add comment..."
         className="textarea-comment"

@@ -27,13 +27,37 @@ button {
   box-shadow: 0 0 10px var(--light-gray);
 }
 
-.user-avatar {
-  position: relative;
+.user-avatar img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  border-radius: 50%;
 }
 
-.user-avatar img {
-  position: absolute;
-  top: -17px;
-  height: 40px;
-  left: -30px;
+.flex {
+  display: flex;
+}
+
+.mt-10 {
+  margin-top: 40px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.title {
+  text-align: center;
 }

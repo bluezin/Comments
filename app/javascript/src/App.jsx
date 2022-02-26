@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import InputComment from "./components/InputComment";
 import Comment from "./components/Comment";
+import "./styles/App.scss";
 
 const App = () => {
   const [comments, setComments] = useState([]);
@@ -12,12 +12,12 @@ const App = () => {
     axios.get("/api/comments").then((data) => {
       setComments(data.data);
       setLoading(false);
-      console.log(data.data);
     });
   }, []);
 
   return (
-    <section>
+    <section className="App">
+      <h1 className="title">Feedback with Ruby on Rails</h1>
       {comments &&
         !loading &&
         comments.map((comment) => (
@@ -26,10 +26,9 @@ const App = () => {
             user={comment.user}
             content={comment.content}
             createComment={comment.created_at}
+            setComments={setComments}
           />
         ))}
-
-      <InputComment />
     </section>
   );
 };

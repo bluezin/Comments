@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'like/aument'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "pages#index"
 
@@ -11,4 +12,8 @@ Rails.application.routes.draw do
   # end
 
   get "/api/comments", to: "comments#show"
+  post "/api/comments/create", to: "comments#create"
+
+  get "/api/user", to: "users#show"
+
 end
