@@ -16,6 +16,15 @@ class CommentsController < ApplicationController
     end
   end
 
+  def like_comment
+    comment_id = params[:comment]["id"]
+    comment = Comment.find_by(id: comment_id)
+    like = comment.like + 1
+    comment.update(like: like)
+
+    render json: like
+  end
+
   private
 
   def comment_params

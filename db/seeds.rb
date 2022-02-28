@@ -8,4 +8,6 @@
 
 user = User.create(name: "angie_velasquez", image_url: "https://img4.codigonuevo.com/bd/25/51/large-29-930x600.jpg")
 
-comments = Comment.create([{ content: "Hello, is this my third comment", user: user }])
+comments = Comment.create([{ content: "Ruby on Rails, es un conjunto de herramientas para la creación de aplicaciones web escrito en Ruby, un lenguaje de programación dinámico y de propósito general. Tu que opinas??", user: user, like: 1 }])
+
+

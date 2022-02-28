@@ -2,14 +2,19 @@ import React, { useState } from "react";
 import Reply from "/app/assets/images/icon-reply.svg";
 import moment from "moment";
 import "../styles/Comment.scss";
-import InputComment from "./InputComment";
+import axios from "axios";
 
-const Comment = ({ user, content, createComment, setComments }) => {
-  const [like, setLike] = useState(0);
-  const [reply, setReply] = useState(false);
+const Comment = ({ id, user, likeComment, content, createComment, reply, setReply }) => {
+  const [like, setLike] = useState(likeComment);
 
   const handleLike = () => {
-    setLike(like + 1);
+    axios
+      .post("/api/like", {
+        id,
+      })
+      .then((data) => {
+        setLike(data.data);
+      });
   };
 
   return (
@@ -42,7 +47,6 @@ const Comment = ({ user, content, createComment, setComments }) => {
           </div>
         </div>
       </div>
-      {reply && <InputComment setComments={setComments} />}
     </React.Fragment>
   );
 };

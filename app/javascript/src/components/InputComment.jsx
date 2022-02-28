@@ -17,7 +17,9 @@ const InputComment = ({ setComments }) => {
       .post("http://localhost:3000/api/comments/create", {
         content: newComment,
       })
-      .then((data) => setComments(data.data));
+      .then((data) => {
+        setComments(data.data);
+      });
   };
 
   useEffect(() => {
@@ -34,6 +36,7 @@ const InputComment = ({ setComments }) => {
       <textarea
         placeholder="Add comment..."
         className="textarea-comment"
+        defaultValue={newComment}
         onChange={handleComment}
       />
       <button className="button-send" onClick={handleSend}>

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Comment from "./components/Comment";
+import InputComment from "./components/InputComment";
 import "./styles/App.scss";
 
 const App = () => {
   const [comments, setComments] = useState([]);
+  const [reply, setReply] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -23,12 +25,16 @@ const App = () => {
         comments.map((comment) => (
           <Comment
             key={comment.id}
+            id={comment.id}
+            likeComment={comment.like}
             user={comment.user}
             content={comment.content}
             createComment={comment.created_at}
-            setComments={setComments}
+            reply={reply}
+            setReply={setReply}
           />
         ))}
+      {reply && <InputComment setComments={setComments} />}
     </section>
   );
 };

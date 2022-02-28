@@ -11,9 +11,14 @@ Rails.application.routes.draw do
   #   end
   # end
 
+  # comments
   get "/api/comments", to: "comments#show"
   post "/api/comments/create", to: "comments#create"
 
+  # users
   get "/api/user", to: "users#show"
+
+  # likes
+  post "/api/like", to: "comments#like_comment"
 
 end
