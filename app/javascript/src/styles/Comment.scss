@@ -14,14 +14,12 @@
   font-size: 12px;
   font-weight: 600;
   color: var(--dark-blue);
-  margin-top: -10px;
 }
 
 .comment-created {
   color: var(--light-grayish-blue);
   font-size: 12px;
   font-weight: 300;
-  margin-top: -8px;
 }
 
 .comment-content {
@@ -42,5 +40,10 @@
 
   &:hover {
     opacity: 0.4;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-top: 10px;
+    margin-left: -5px;
   }
 }

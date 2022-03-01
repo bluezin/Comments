@@ -27,7 +27,7 @@ const Comment = ({ id, user, likeComment, content, createComment, reply, setRepl
           </button>
 
           <div className="tab-comment">
-            <div className="flex justify-between">
+            <div className="flex justify-between flex-wrap">
               <div className="flex user-comment gap-10 align-items">
                 <figcaption>
                   <img src={user.image_url} alt={`${user.name}`} />
