@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2022_02_28_173615) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.string "content"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.integer "like", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
