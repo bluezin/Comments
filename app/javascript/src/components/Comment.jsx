@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import Reply from "/app/assets/images/icon-reply.svg";
 import moment from "moment";
-import "../styles/Comment.scss";
+import "/app/assets/stylesheets/Comment.scss";
 import axios from "axios";
 
-const Comment = ({ id, user, likeComment, content, createComment, reply, setReply }) => {
+const Comment = ({
+  id,
+  user,
+  likeComment,
+  content,
+  createComment,
+  reply,
+  setReply,
+}) => {
   const [like, setLike] = useState(likeComment);
 
   const handleLike = () => {

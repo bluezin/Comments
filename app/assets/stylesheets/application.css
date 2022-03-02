@@ -14,7 +14,7 @@
  *= require_self
  */
 
-@import url("../../javascript/src/styles/App.scss");
-@import url("../../javascript/src/styles/Comment.scss");
-@import url("../../javascript/src/styles/InputComment.scss");
-@import url("../../javascript/src/styles/index.css");
+@import url("./App.scss");
+@import url("./Comment.scss");
+@import url("./InputComment.scss");
+@import url("./index.css");

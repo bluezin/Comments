@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Comment from "./components/Comment";
 import InputComment from "./components/InputComment";
-import "./styles/App.scss";
+import "/app/assets/stylesheets/App.scss";
 
 const App = () => {
   const [comments, setComments] = useState([]);

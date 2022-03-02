@@ -5,7 +5,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "../src/App";
-import "../src/styles/index.css";
+import "/app/assets/stylesheets/index.css";
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
