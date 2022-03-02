@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
-.shadow {
-  box-shadow: 0 0 10px var(--light-gray);
-}
+
+@import url("../../javascript/src/styles/App.scss");
+@import url("../../javascript/src/styles/Comment.scss");
+@import url("../../javascript/src/styles/InputComment.scss");
+@import url("../../javascript/src/styles/index.css");
