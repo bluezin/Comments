@@ -9,12 +9,14 @@ class CommentsController < ApplicationController
   def create
     comment_params = params[:comment]["content"]
     @comment = Comment.new(content: comment_params, user: User.first)
+    @comment.save
 
-    if @comment.save
-      render json: Comment.all
-    else
-      render json: @comment.errors
-    end
+    # if @comment.save
+    #   render json: Comment.all
+    # else
+    #   render json: @comment.errors
+    # end
+    render json: Comment.all
   end
 
   def like_comment
