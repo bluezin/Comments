@@ -14,7 +14,7 @@ const InputComment = ({ setComments }) => {
     if (newComment.trim() === "") return;
 
     axios
-      .post("http://localhost:3000/api/comments/create", {
+      .post("/api/comments/create", {
         content: newComment,
       })
       .then((data) => {

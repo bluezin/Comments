@@ -7,16 +7,13 @@ class CommentsController < ApplicationController
   end
 
   def create
-    comment_params = params[:comment]["content"]
     @comment = Comment.new(content: comment_params, user: User.first)
-    @comment.save
 
-    # if @comment.save
-    #   render json: Comment.all
-    # else
-    #   render json: @comment.errors
-    # end
-    render json: Comment.all
+    if @comment.save
+      render json: Comment.all
+    else
+      render json: @comment.errors
+    end
   end
 
   def like_comment
@@ -26,5 +23,11 @@ class CommentsController < ApplicationController
     comment.update(like: like)
 
     render json: like
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:content)["content"]
   end
 end
