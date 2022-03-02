@@ -13,8 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-@import url("./App.scss");
-@import url("./Comment.scss");
-@import url("./InputComment.scss");
-@import url("./index.css");
