@@ -31,7 +31,7 @@ const InputComment = ({ setComments }) => {
   return (
     <div className="inputComment shadow">
       <figcaption className="user-avatar">
-        <img src={user.image_url} alt={user.name} />
+        <img src={user?.image_url} alt={user?.name} />
       </figcaption>
       <textarea
         placeholder="Add comment..."

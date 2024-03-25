@@ -38,9 +38,9 @@ const Comment = ({
             <div className="flex justify-between flex-wrap">
               <div className="flex user-comment gap-10 align-items">
                 <figcaption>
-                  <img src={user.image_url} alt={`${user.name}`} />
+                  <img src={user?.image_url} alt={`${user?.name}`} />
                 </figcaption>
-                <strong className="user-name">{user.name}</strong>
+                <strong className="user-name">{user?.name}</strong>
                 <span className="comment-created">
                   {moment(createComment).format("LLL")}
                 </span>

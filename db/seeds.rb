@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create(name: "angie_velasquez", image_url: "https://img4.codigonuevo.com/bd/25/51/large-29-930x600.jpg")
+user = User.create(name: "yadira", image_url: "https://lh3.googleusercontent.com/a-/AOh14Gi61BLRpSTTPdDYjbBcfm091-flvdyjPMokG5aORQ=s96-c")
 
 comments = Comment.create([{ content: "Ruby on Rails, es un conjunto de herramientas para la creación de aplicaciones web escrito en Ruby, un lenguaje de programación dinámico y de propósito general. Tu que opinas??", user: user, like: 1 }])
 
